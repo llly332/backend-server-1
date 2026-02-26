@@ -23,7 +23,7 @@ app.get("/test", async (req, res) => {
       }
     );
 
-    res.json(output);
+    res.redirect(output[0]); // يعرض الصورة مباشرة
   } catch (error) {
     console.error(error);
     res.status(500).send(error.message);
