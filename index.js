@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 app.get("/test", async (req, res) => {
   try {
     const output = await replicate.run(
-      "stability-ai/sdxl",
+      "black-forest-labs/flux-schnell",
       {
         input: {
           prompt: "3D futuristic sword"
