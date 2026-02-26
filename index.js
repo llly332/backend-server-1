@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 app.get("/test", async (req, res) => {
   try {
     const output = await replicate.run(
-      "stability-ai/sdxl:latest",
+      "stability-ai/sdxl",
       {
         input: {
           prompt: "3D futuristic sword"
@@ -26,7 +26,7 @@ app.get("/test", async (req, res) => {
     res.json(output);
   } catch (error) {
     console.error(error);
-    res.status(500).send(error.message); // 👈 هنا التعديل
+    res.status(500).send(error.message);
   }
 });
 
