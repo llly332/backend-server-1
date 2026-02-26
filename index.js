@@ -26,7 +26,7 @@ app.get("/test", async (req, res) => {
     res.json(output);
   } catch (error) {
     console.error(error);
-    res.status(500).send("Error with Replicate");
+    res.status(500).send(error.message); // 👈 هنا التعديل
   }
 });
 
